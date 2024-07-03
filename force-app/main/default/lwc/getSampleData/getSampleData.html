@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Extractor Window">
+        <div class="slds-m-around_medium">
+            <lightning-dual-listbox name="Objects" label="Select Objects" source-label="Available"
+                selected-label="Selected" field-level-help="Please do not select more than 10 Object at once" options={objectOptions}
+                onchange={handleObjectChange} class="slds-var-m-bottom_medium"></lightning-dual-listbox>
+                <div class=""></div>
+            <div class="slds-m-vertical_medium">
+                <p><strong> Selected values are: </strong> {selectedObjects}</p>
+            </div>
+            <lightning-button variant="brand" label="Export" onclick={handleSubmit} class="slds-var-m-bottom_medium">
+            </lightning-button>
+        </div>
+    </lightning-card>
+</template>
